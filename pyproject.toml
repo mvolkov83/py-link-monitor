@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py-link-monitor"
-version = "0.1.0"
+version = "0.1.1"
 description = "Link monitor written on Python that uses command line ping utility"
 authors = ["Mykhailo  Volkov <mvolkov83@gmail.com>"]
 license = "MIT"
