@@ -19,7 +19,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip poetry
-
-      - name: Build the wheel
+      - name: Publish
+        env:
+          PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
-          poetry build
+          poetry config pypi-token.pypi $PYPI_TOKEN
+          poetry publish --build
